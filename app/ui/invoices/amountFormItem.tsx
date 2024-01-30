@@ -6,7 +6,7 @@ const AmountFormItem = ({
   errors,
   defaultValue,
 }: {
-  errors?: string[];
+  errors?: string[] | undefined;
   defaultValue?: number;
 }) => {
   return (

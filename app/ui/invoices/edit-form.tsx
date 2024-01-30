@@ -4,7 +4,6 @@ import { CustomerField, InvoiceForm } from '@/app/lib/definitions';
 import Link from 'next/link';
 import { Button } from '@/app/ui/button';
 import { updateInvoice } from '@/app/lib/actions';
-// @ts-ignore
 import { useFormState } from 'react-dom';
 import CustomerFormItem from '@/app/ui/invoices/customerFormItem';
 import AmountFormItem from '@/app/ui/invoices/amountFormItem';

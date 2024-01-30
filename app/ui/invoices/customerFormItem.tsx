@@ -9,7 +9,7 @@ const CustomerFormItem = ({
   defaultValue = '',
 }: {
   customers: CustomerField[];
-  errors?: string[];
+  errors?: string[] | undefined;
   defaultValue?: string;
 }) => {
   return (

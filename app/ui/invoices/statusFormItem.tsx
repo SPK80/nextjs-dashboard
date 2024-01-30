@@ -6,7 +6,7 @@ const StatusFormItem = ({
   errors,
   defaultValue,
 }: {
-  errors?: string[];
+  errors?: string[] | undefined;
   defaultValue?: 'pending' | 'paid';
 }) => {
   return (
