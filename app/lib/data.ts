@@ -176,15 +176,27 @@ export async function fetchInvoiceById(id: string) {
   }
 }
 
-export async function fetchCustomers() {
-  try {
-    const data = await sql<CustomerField>`
+export async function fetchCustomers(allFields: boolean = false) {
+  const sqlPromise = allFields
+    ? sql<CustomerField>`
+      SELECT
+        id,
+        name,
+        email,
+        image_url
+      FROM customers
+      ORDER BY name ASC
+    `
+    : sql<CustomerField>`
       SELECT
         id,
         name
       FROM customers
       ORDER BY name ASC
     `;
+
+  try {
+    const data = await sqlPromise;
 
     const customers = data.rows;
     return customers;
